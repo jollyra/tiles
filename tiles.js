@@ -1,4 +1,4 @@
-var tiles = {
+module.exports = {
 	init: function init(size) {
 		this.size = size;
 		this.stick = []
@@ -14,4 +14,4 @@ var tiles = {
 		var tileIdx = y * this.size + x;
 		return this.stick[tileIdx] = val;
 	}
-}
+};
