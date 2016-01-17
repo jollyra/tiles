@@ -1,0 +1,22 @@
+{
+  "name": "tiles",
+  "description": "A module for dealing with 2-dimensional tile maps",
+  "main": "bundle.js",
+  "authors": [
+    "Nigel Rahkola <me@nigelrahkola.com> (https://github.com/jollyra)"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "tile",
+    "map"
+  ],
+  "homepage": "https://github.com/jollyra/tiles",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
