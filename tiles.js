@@ -1,13 +1,9 @@
 var T = {
-	stick: [],
-	size: 0,
-
-	init: function init(size) {
-		this.size = size;
-		this.stick = [];
-		for(var i = 0; i < size * size; i++) {
-			this.stick.push(0);
-		}
+	readStick: function readStick(stick, xsize, ysize) {
+		if (xsize * ysize !== stick.length) throw "Size doesn't check out";
+		this.stick = stick;
+		this.xsize = xsize;
+		this.ysize = ysize;
 	},
 
 	getTile: function getTile(x, y) {
