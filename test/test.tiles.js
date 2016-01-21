@@ -11,4 +11,15 @@ describe('tiles', function() {
 			expect(tiles.stick.length).to.be(9);
 		});
 	});
+
+	describe('#getTile()', function () {
+		it('should return the last tile in a square stick', function () {
+			var stick = ['1','2','3','4','5','6','7','8','9'];
+			var tiles = Object.create(T);
+			var xsize = 3;
+			var ysize = 3;
+			tiles.readStick(stick, xsize, ysize);
+			expect(tiles.getTile(2,2)).to.be('9');
+		});
+	});
 });
