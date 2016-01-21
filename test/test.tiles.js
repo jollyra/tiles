@@ -1,20 +1,14 @@
-var assert = require('assert');
-var Tiles = require('../tiles');
-
 describe('tiles', function() {
 	describe('#init()', function () {
 		it('should return a stick with the specified size', function () {
-			var tiles = Object.create(Tiles);
-			console.log(tiles);
+			var tiles = Object.create(T);
 			tiles.init(3);
-			console.log(tiles);
-			assert.equal(map.stick.length === 9, true);
+			expect(tiles.stick.length).to.be(9);
 		});
 	});
 
 	describe('#getTile()', function () {
-		it('should return the tile 8 at location (1,2)', function () {
-			debugger;
+		xit('should return the tile 8 at location (1,2)', function () {
 			var map = tiles(3);
 			map.stick = ['0','0','0','0','0','8','0','0','0'];
 			console.log("@@@", map);
