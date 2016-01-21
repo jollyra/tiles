@@ -7,7 +7,7 @@ var T = {
 	},
 
 	getTile: function getTile(x, y) {
-		var tileIdx = y * this.ysize + x;
+		var tileIdx = y * this.xsize + x;
 		return this.stick[tileIdx];
 	},
 
