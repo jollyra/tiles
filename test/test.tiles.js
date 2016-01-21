@@ -44,12 +44,16 @@ describe('tiles', function() {
 			var ysize = 3;
 			tiles.readStick(stick, xsize, ysize);
 
-			it('should return the last tile in a sqaure stick', function () {
+			it('should return the last tile in a stick', function () {
 				expect(tiles.getTile(2,2)).to.be('k');
 			});
 
-			it('should return the first tile in a sqaure stick', function () {
+			it('should return the first tile in a stick', function () {
 				expect(tiles.getTile(0,0)).to.be('a');
+			});
+
+			it('should return an arbitrary tile in a stick', function () {
+				expect(tiles.getTile(1,2)).to.be('j');
 			});
 		});
 	});
@@ -64,12 +68,16 @@ describe('tiles', function() {
 			var ysize = 3;
 			tiles.readStick(stick, xsize, ysize);
 
-			it('should return the last tile in a sqaure stick', function () {
+			it('should return the last tile in a stick', function () {
 				expect(tiles.getTile(3,2)).to.be('l');
 			});
 
-			it('should return the first tile in a sqaure stick', function () {
+			it('should return the first tile in a stick', function () {
 				expect(tiles.getTile(0,0)).to.be('a');
+			});
+
+			it('should return an arbitrary tile in a stick', function () {
+				expect(tiles.getTile(1,2)).to.be('j');
 			});
 		});
 	});
