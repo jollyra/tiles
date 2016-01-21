@@ -14,7 +14,7 @@ var T = {
 
 	setTile: function setTile(x, y, val) {
 		this.boundsCheck(x, y);
-		var tileIdx = y * this.size + x;
+		var tileIdx = y * this.xsize + x;
 		return this.stick[tileIdx] = val;
 	},
 

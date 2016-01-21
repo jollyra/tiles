@@ -35,15 +35,15 @@ describe('tiles', function() {
 	});
 
 	describe('for a square stick', function () {
-		describe('#getTile()', function () {
-			var stick = ['a','b','c'
-						,'e','f','g'
-						,'i','j','k'];
-			var tiles = Object.create(T);
-			var xsize = 3;
-			var ysize = 3;
-			tiles.readStick(stick, xsize, ysize);
+		var stick = ['a','b','c'
+					,'e','f','g'
+					,'i','j','k'];
+		var tiles = Object.create(T);
+		var xsize = 3;
+		var ysize = 3;
+		tiles.readStick(stick, xsize, ysize);
 
+		describe('#getTile()', function () {
 			it('should return the last tile in a stick', function () {
 				expect(tiles.getTile(2,2)).to.be('k');
 			});
@@ -65,16 +65,24 @@ describe('tiles', function() {
 				});
 			});
 		});
+
+		describe('#setTile()', function () {
+			it('should change a tile in a stick', function () {
+				tiles.setTile(1,2,'x');
+				expect(tiles.getTile(1,2)).to.be('x');
+			});
+		});
 	});
 
 	describe('for a non-square stick', function () {
+		var stick = ['a','b','c','d'
+					,'e','f','g','h'
+					,'i','j','k','l'];
+		var tiles = Object.create(T);
+		var xsize = 4;
+		var ysize = 3;
+
 		describe('#getTile()', function () {
-			var stick = ['a','b','c','d'
-						,'e','f','g','h'
-						,'i','j','k','l'];
-			var tiles = Object.create(T);
-			var xsize = 4;
-			var ysize = 3;
 			tiles.readStick(stick, xsize, ysize);
 
 			it('should return the last tile in a stick', function () {
@@ -92,6 +100,21 @@ describe('tiles', function() {
 			it('should throw range error when x greater than xsize', function () {
 				var fn = function () {
 					tiles.getTile(4,2);
+				};
+				expect(fn).to.throwException(function (e) {
+					expect(e).to.be.a(RangeError);
+				});
+			});
+		});
+
+		describe('#setTile()', function () {
+			it('should change a tile in a stick', function () {
+				tiles.setTile(3,1,'x');
+				expect(tiles.getTile(3,1)).to.be('x');
+			});
+			it('should throw range error when y greater than ysize', function () {
+				var fn = function () {
+					tiles.setTile(1,7);
 				};
 				expect(fn).to.throwException(function (e) {
 					expect(e).to.be.a(RangeError);
