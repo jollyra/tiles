@@ -55,6 +55,15 @@ describe('tiles', function() {
 			it('should return an arbitrary tile in a stick', function () {
 				expect(tiles.getTile(1,2)).to.be('j');
 			});
+
+			it('should throw range error when y less than 0', function () {
+				var fn = function () {
+					tiles.getTile(4,-1);
+				};
+				expect(fn).to.throwException(function (e) {
+					expect(e).to.be.a(RangeError);
+				});
+			});
 		});
 	});
 
@@ -78,6 +87,15 @@ describe('tiles', function() {
 
 			it('should return an arbitrary tile in a stick', function () {
 				expect(tiles.getTile(1,2)).to.be('j');
+			});
+
+			it('should throw range error when x greater than xsize', function () {
+				var fn = function () {
+					tiles.getTile(4,2);
+				};
+				expect(fn).to.throwException(function (e) {
+					expect(e).to.be.a(RangeError);
+				});
 			});
 		});
 	});
