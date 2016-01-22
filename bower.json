@@ -2,6 +2,7 @@
   "name": "tiles",
   "description": "A module for dealing with 2-dimensional tile maps",
   "main": "bundle.js",
+  "version": "0.0.1",
   "authors": [
     "Nigel Rahkola <me@nigelrahkola.com> (https://github.com/jollyra)"
   ],
