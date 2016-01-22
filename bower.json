@@ -8,7 +8,9 @@
   "license": "ISC",
   "keywords": [
     "tile",
-    "map"
+    "map",
+	"2d",
+	"array"
   ],
   "homepage": "https://github.com/jollyra/tiles",
   "moduleType": [],
@@ -17,6 +19,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+	"README.md",
+	"LICENCE",
+	"bower.json"
   ]
 }
