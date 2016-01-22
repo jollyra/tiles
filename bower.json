@@ -2,7 +2,7 @@
   "name": "tiles",
   "description": "A module for dealing with 2-dimensional tile maps",
   "main": "bundle.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "Nigel Rahkola <me@nigelrahkola.com> (https://github.com/jollyra)"
   ],
@@ -10,8 +10,8 @@
   "keywords": [
     "tile",
     "map",
-	"2d",
-	"array"
+    "2d",
+    "array"
   ],
   "homepage": "https://github.com/jollyra/tiles",
   "moduleType": [],
@@ -20,8 +20,8 @@
     "node_modules",
     "bower_components",
     "test",
-	"README.md",
-	"LICENCE",
-	"bower.json"
+    "README.md",
+    "LICENCE",
+    "bower.json"
   ]
 }
