@@ -6,6 +6,15 @@ var T = {
 		this.ysize = ysize;
 	},
 
+	zeros: function zeros(xsize, ysize) {
+		this.xsize = xsize;
+		this.ysize = ysize;
+		this.stick = [];
+		for(var i = 0; i < xsize * ysize; i++) {
+			this.stick.push(0);
+		}
+	},
+
 	getTile: function getTile(x, y) {
 		this.boundsCheck(x, y);
 		var tileIdx = y * this.xsize + x;

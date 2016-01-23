@@ -34,6 +34,28 @@ describe('tiles', function() {
 		});
 	});
 
+	describe('#zeros()', function () {
+		it('should initialize a stick full of zeros', function () {
+			var tiles = Object.create(T);
+			var xsize = 4;
+			var ysize = 10;
+			tiles.zeros(xsize, ysize);
+			expect(tiles.stick.length).to.be(40);
+		});
+
+		it('should initialize a square stick full of zeros', function () {
+			var tiles = Object.create(T);
+			var xsize = 2;
+			var ysize = 2;
+			tiles.zeros(xsize, ysize);
+			expect(tiles.stick.length).to.be(4);
+			expect(tiles.stick[0]).to.be(0);
+			expect(tiles.stick[1]).to.be(0);
+			expect(tiles.stick[2]).to.be(0);
+			expect(tiles.stick[3]).to.be(0);
+		});
+	});
+
 	describe('for a square stick', function () {
 		var stick = ['a','b','c'
 					,'e','f','g'
