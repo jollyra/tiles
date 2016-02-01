@@ -1,5 +1,5 @@
 var T = {
-	readStick: function readStick(stick, xsize, ysize) {
+	fromStick: function fromStick(stick, xsize, ysize) {
 		if (xsize * ysize !== stick.length) throw "Size does not check out";
 		this.stick = stick;
 		this.xsize = xsize;
