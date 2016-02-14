@@ -1,0 +1,29 @@
+{
+  "name": "tiles",
+  "version": "1.0.0",
+  "description": "Library for handling sticks of tiles",
+  "main": "tiles.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jollyra/tiles.git"
+  },
+  "keywords": [
+    "tiles",
+    "stick",
+    "2d",
+    "map",
+    "array"
+  ],
+  "author": "Nigel Rahkola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jollyra/tiles/issues"
+  },
+  "homepage": "https://github.com/jollyra/tiles#readme"
+}
