@@ -1,12 +1,12 @@
 describe('tiles', function() {
-	describe('#readStick()', function () {
+	describe('#fromStick()', function () {
 
 		it('should read a stick and record dimensions', function () {
 			var stick = ['0','0','0','0','0','8','0','0','0'];
 			var tiles = Object.create(T);
 			var xsize = 3;
 			var ysize = 3;
-			tiles.readStick(stick, xsize, ysize);
+			tiles.fromStick(stick, xsize, ysize);
 			expect(tiles.xsize).to.be(3);
 			expect(tiles.ysize).to.be(3);
 			expect(tiles.stick.length).to.be(9);
@@ -18,7 +18,7 @@ describe('tiles', function() {
 			var xsize = 4;
 			var ysize = 3;
 			var fn = function () {
-				tiles.readStick(stick, xsize, ysize);
+				tiles.fromStick(stick, xsize, ysize);
 			};
 			expect(fn).to.throwException(/Size does not check out/);
 		});
@@ -28,7 +28,7 @@ describe('tiles', function() {
 			var xsize = 2;
 			var ysize = 2;
 			var fn = function () {
-				tiles.readStick(stick, xsize, ysize);
+				tiles.fromStick(stick, xsize, ysize);
 			};
 			expect(fn).to.throwException(/Size does not check out/);
 		});
@@ -63,7 +63,7 @@ describe('tiles', function() {
 		var tiles = Object.create(T);
 		var xsize = 3;
 		var ysize = 3;
-		tiles.readStick(stick, xsize, ysize);
+		tiles.fromStick(stick, xsize, ysize);
 
 		describe('#getTile()', function () {
 			it('should return the last tile in a stick', function () {
@@ -105,7 +105,7 @@ describe('tiles', function() {
 		var ysize = 3;
 
 		describe('#getTile()', function () {
-			tiles.readStick(stick, xsize, ysize);
+			tiles.fromStick(stick, xsize, ysize);
 
 			it('should return the last tile in a stick', function () {
 				expect(tiles.getTile(3,2)).to.be('l');
