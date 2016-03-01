@@ -1,5 +1,5 @@
 {
-  "name": "tiles",
+  "name": "tile-stick",
   "version": "1.0.0",
   "description": "Library for handling sticks of tiles",
   "main": "tiles.js",
